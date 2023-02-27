@@ -1,0 +1,15 @@
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.csproj.AssemblyReference.cache
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.AssemblyInfoInputs.cache
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.AssemblyInfo.cs
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.csproj.CoreCompileInputs.cache
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\bin\Debug\net7.0\EstacionamentoPareAqui.exe
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\bin\Debug\net7.0\EstacionamentoPareAqui.deps.json
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\bin\Debug\net7.0\EstacionamentoPareAqui.runtimeconfig.json
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\bin\Debug\net7.0\EstacionamentoPareAqui.dll
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\bin\Debug\net7.0\EstacionamentoPareAqui.pdb
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.dll
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\refint\EstacionamentoPareAqui.dll
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.pdb
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\EstacionamentoPareAqui.genruntimeconfig.cache
+C:\Users\Delson Magalhaes\FloripaMaisTec\Projetos\Semana3C#\EstacionamentoPareAqui\obj\Debug\net7.0\ref\EstacionamentoPareAqui.dll
