@@ -1,6 +1,6 @@
 ﻿using EstacionamentoPareAqui;
 
-
+List<Carro> carros = new List<Carro>(); 
 string opcao;
             
 do
@@ -13,14 +13,16 @@ do
     Console.WriteLine("2 - Entrada do veículo");                
     Console.WriteLine("3 - Saída do veículo");
     Console.WriteLine("4 - Consultar histórico");
-    Console.WriteLine("5 - Sair"); 
-                
+    Console.WriteLine("5 - Exibir carros");
+    Console.WriteLine("6 - Sair"); 
+
+              
     opcao = Console.ReadLine();
 
     if (opcao == "1"){
         Console.WriteLine("Cadastrar veículo");
         Carro novoCarro = CadastrarVeiculo();
-        break;
+        carros.Add(novoCarro);
 
     }else if (opcao == "2"){
         Console.WriteLine("Entrada  do veículo");
@@ -37,12 +39,19 @@ do
         Console.Read();
         break;
         //  Historico();
-    }else if (opcao == "5"){ break; 
+    }else if (opcao == "5"){
+        Console.WriteLine("Exibir carros");
+        for (int i = 0; i < carros.Count; i++ ){
+            Console.WriteLine($"{carros[i].Placa}, {carros[i].Modelo}, {carros[i].Marca}, {carros[i].Cor}");
+        }
+             Console.Read();
+    }else if (opcao == "6"){ break; 
     }else {Console.WriteLine("Opção Invalida!");
             Console.Read();
             break;}
 
-}while (opcao != "5");
+}while (opcao != "6");
+
 
 Carro CadastrarVeiculo(){
     Carro carro = new Carro();
@@ -55,4 +64,4 @@ Carro CadastrarVeiculo(){
     Console.WriteLine("Digite a Marca: ");
     carro.Marca = Console.ReadLine();
     return carro;
-    }
+}

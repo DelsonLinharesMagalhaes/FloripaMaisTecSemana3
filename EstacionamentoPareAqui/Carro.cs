@@ -11,7 +11,6 @@ namespace EstacionamentoPareAqui
         public string Modelo { get; set; }
         public string Cor { get; set;}
         public string Marca { get; set; }
-        //public list<ticket> listaTicket { get; set; }
 
         public Carro(){
 
