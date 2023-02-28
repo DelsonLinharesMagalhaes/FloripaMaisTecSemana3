@@ -2,6 +2,7 @@
 
 List<Carro> carros = new List<Carro>(); 
 string opcao;
+string novaPlaca;
             
 do
 {
@@ -26,8 +27,12 @@ do
 
     }else if (opcao == "2"){
         Console.WriteLine("Entrada  do veículo");
+        ObterCarro();
+        
         Console.Read();
         break;
+
+       
         // EntradaDoVeiculo();
     }else if (opcao == "3"){
         Console.WriteLine("Saída do veículo");
@@ -65,3 +70,22 @@ Carro CadastrarVeiculo(){
     carro.Marca = Console.ReadLine();
     return carro;
 }
+
+void ObterCarro(){
+    Console.WriteLine("Digite a placa: ");
+    novaPlaca = Console.ReadLine();  
+    bool carroCadastrado = false;
+    for (int i = 0; i < carros.Count(); i++){
+        if(carros[i].Placa == novaPlaca){
+           Console.WriteLine($"{carros[i].Placa} + {carros[i].Modelo} + {carros[i].Cor} + {carros[i].Marca}");
+            carroCadastrado = true;
+           // break;
+        }
+        if (carroCadastrado == false){
+            Console.WriteLine("O carro não esta cadastrado! ");
+            Console.Read() ;
+        }
+    }
+}
+
+ 
