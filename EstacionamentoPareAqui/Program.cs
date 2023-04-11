@@ -27,10 +27,7 @@ do
 
     }else if (opcao == "2"){
         Console.WriteLine("Entrada  do veículo");
-        ObterCarro();
-        
-        Console.Read();
-        break;
+        GerarTicket();
 
        
         // EntradaDoVeiculo();
@@ -70,22 +67,55 @@ Carro CadastrarVeiculo(){
     carro.Marca = Console.ReadLine();
     return carro;
 }
+//void ObterCarro(string testePlaca){
+//    bool carroCadastrado = false;
+//    for (int i = 0; i < carros.Count(); i++){
+//        if(carros[i].Placa == testePlaca){
+//           Console.WriteLine($"{carros[i].Placa} + {carros[i].Modelo} + {carros[i].Cor} + {carros[i].Marca}");
+//            carroCadastrado = true;
+//           // break;
+//        }
+//        if (carroCadastrado == false){
+//            Console.WriteLine("O carro não esta cadastrado! ");
+//            Console.Read() ;
+//        }
+//    }
+ 
 
-void ObterCarro(){
-    Console.WriteLine("Digite a placa: ");
-    novaPlaca = Console.ReadLine();  
-    bool carroCadastrado = false;
-    for (int i = 0; i < carros.Count(); i++){
-        if(carros[i].Placa == novaPlaca){
-           Console.WriteLine($"{carros[i].Placa} + {carros[i].Modelo} + {carros[i].Cor} + {carros[i].Marca}");
-            carroCadastrado = true;
-           // break;
-        }
-        if (carroCadastrado == false){
-            Console.WriteLine("O carro não esta cadastrado! ");
-            Console.Read() ;
-        }
+
+
+    //foreach(var ticket in carros.){
+    //    if(ticket.Ativo == true){
+    //    Console.WriteLine("Veiculo já esta no estacionamento"); 
+    //    return; 
+    //}
+    //}
+
+Carro ObterCarro(string placa){
+    foreach(var carro in carros){
+    if (placa == carro.Placa){
+      return carro;
     }
+    }
+    return null;
 }
 
+void GerarTicket(){
+    Console.WriteLine("Digite a placa: ");
+    novaPlaca = Console.ReadLine();  
+    var carro = ObterCarro(novaPlaca);
+    if(carro == null){
+        Console.WriteLine("Carro não cadastrado"); 
+    return;
+    } 
+    foreach(var ticket in carro.Tickets){
+    if(ticket.Ativo == true){
+        Console.WriteLine("Veiculo já esta no estacionamento"); 
+        return; 
+    }
+    }
+    Ticket ticketNovo = new Ticket();
+    carro.Tickets.Add(ticketNovo);
+    Console.WriteLine("Ticket Gerado!"); 
+}
  
