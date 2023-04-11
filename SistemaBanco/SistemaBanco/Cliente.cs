@@ -11,7 +11,7 @@ namespace SistemaBanco
         public string Endereco { get; set; }
         public DateTime DataNascimento { get; set; }
         public int NumeroConta { get; set;}
-        public double Saldo { get; set; }
+        public double Saldo { get { return GetSaldo(); } private set { } }
 
         public List<Transacao> Extrato { get; set; }
 
@@ -31,7 +31,7 @@ namespace SistemaBanco
             NumeroConta = numeroConta;
         }
 
-        public double GetSaldo() 
+        private double GetSaldo() 
         {
             double saldo = 0;
             foreach (Transacao transacao in Extrato)

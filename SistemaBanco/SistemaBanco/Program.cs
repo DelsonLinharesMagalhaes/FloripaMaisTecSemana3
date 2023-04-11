@@ -150,5 +150,5 @@ void ExibirExtrato()
     { 
         Console.WriteLine("Data: " +transacao.Data+" Valor: "+transacao.Valor);
     }
-    Console.WriteLine("Saldo: " + contaCliente.GetSaldo());
+    Console.WriteLine("Saldo: " + contaCliente.Saldo);
 }
