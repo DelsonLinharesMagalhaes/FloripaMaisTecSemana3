@@ -31,7 +31,15 @@ namespace SistemaBanco
             NumeroConta = numeroConta;
         }
 
-
+        public double GetSaldo() 
+        {
+            double saldo = 0;
+            foreach (Transacao transacao in Extrato)
+            {
+                saldo += transacao.Valor;
+            }
+            return saldo;
+        }
 
     }
 }

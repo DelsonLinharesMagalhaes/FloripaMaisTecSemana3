@@ -34,6 +34,11 @@ do
         AdicionarTransacao();
 
     }
+    if (opcao == "3")
+    {
+        ExibirExtrato();
+
+    }
     if (opcao == "4")
     {
         ExibirClientes();
@@ -84,26 +89,17 @@ void AdicionarTransacao()
     Console.WriteLine("Qual o número da conta?");
     int numeroConta = int.Parse(Console.ReadLine());
 
-    Cliente contaCliente = null;
-    foreach(var cliente in clientes)
-    {
-        if(cliente.NumeroConta == numeroConta) 
-        {
-            contaCliente= cliente;
-            break;
-        }
-    }
+    Cliente contaCliente = BuscarCliente(numeroConta);
+    
     if (contaCliente == null)
     {
         Console.WriteLine("Conta não cadastrada!");
         return;
     }
 
-    Console.WriteLine("Qual é o valor da transsação?");
+    Console.WriteLine("Qual é o valor da transação?");
     double valor = double.Parse(Console.ReadLine());
-    Transacao transacao = new Transacao();
-    transacao.Data = DateTime.Now;
-    transacao.Valor = valor;
+    Transacao transacao = new Transacao(DateTime.Now, valor);
     contaCliente.Extrato.Add(transacao);
 
 }
@@ -123,4 +119,36 @@ void ExibirClientes()
         Console.WriteLine($"Saldo: {clientes[i].Saldo}");
         Console.WriteLine();
     }
+}
+
+Cliente BuscarCliente(int numeroConta)
+{
+    foreach (var cliente in clientes)
+    {
+        if (cliente.NumeroConta == numeroConta)
+        {
+            return cliente;
+        }
+    }
+    return null;
+}
+
+void ExibirExtrato()
+{
+    Console.WriteLine("Qual o número da conta?");
+    int numeroConta = int.Parse(Console.ReadLine());
+
+    Cliente contaCliente = BuscarCliente(numeroConta);
+
+    if (contaCliente == null)
+    {
+        Console.WriteLine("Conta não cadastrada!");
+        return;
+    }
+
+    foreach(Transacao transacao in contaCliente.Extrato) 
+    { 
+        Console.WriteLine("Data: " +transacao.Data+" Valor: "+transacao.Valor);
+    }
+    Console.WriteLine("Saldo: " + contaCliente.GetSaldo());
 }
