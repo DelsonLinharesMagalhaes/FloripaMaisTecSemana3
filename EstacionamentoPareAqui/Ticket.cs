@@ -32,6 +32,13 @@ namespace EstacionamentoPareAqui
             return valor;
         }
 
+        public void FecharTicket()
+        {
+            Saida = DateTime.Now;
+            Ativo = false;
+            Console.WriteLine($"o veiculo ficou {CalcularTempo()} Minutos e O valor cobrado será de R$ {CalcularValor()}");
+        }
+
 
     }
 
